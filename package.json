@@ -1,0 +1,22 @@
+{
+  "name": "aula04sdmnoite2803",
+  "version": "1.0.0",
+  "description": "Aula 04 Sistemas Distribuídos Mobile - Noite - 28/03",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mmamorim/Aula04SDMNoite2803.git"
+  },
+  "author": "Marcelo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mmamorim/Aula04SDMNoite2803/issues"
+  },
+  "homepage": "https://github.com/mmamorim/Aula04SDMNoite2803#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}
