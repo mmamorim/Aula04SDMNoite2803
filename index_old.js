@@ -1,8 +1,5 @@
 
 let util = require("./uteis");
-let dados = require("./dados");
-
-console.log("dados: ",dados);
 
 console.log("🚀🚀🚀 Iniciando meu servidor 🚀🚀🚀");
 
@@ -17,18 +14,20 @@ app.get('/', (req, res) => {
     res.send('Hello World!')
 })
 
-app.get('/bandas', (req, res) => {
-    console.log("Alguem acessou a rota /bandas");
-    console.log(req.params);
-    res.json(dados.bandas);
-})
 
-app.post('/banda', (req, res) => {
-    console.log("Alguem acessou POST na rota /banda com os parametros: ",req.body);
-    let id = req.body.id;
-    let nome = req.body.nome;
-    dados.bandas[id] = { id, nome };
-    res.json(dados.bandas[id]);
+app.get('/teste/algo/:nome/:idade', (req, res) => {
+
+    console.log("Alguem acessou a rota /teste/algo");
+    console.log(req.params);
+    res.send(`
+    <div style="width: 300px; border: 1px solid black; padding: 4px;">
+        <p style="font-weight: 800;">Você acessou a rota</p> 
+        /teste/algo
+        <p>nome: ${req.params.nome}</p>
+        <p>idade: ${req.params.idade}</p>
+    </div>
+  `)
+
 })
 
 app.listen(port, () => {
